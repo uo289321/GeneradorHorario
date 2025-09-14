@@ -5,7 +5,7 @@ import re
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 
-url = "https://gobierno.ingenieriainformatica.uniovi.es/grado/plan/plan.php?y=25-26&t=s1&DS.T.2=DS.T.2&DS.S.3=DS.S.3&DS.L.3=DS.L.3&DS.TG.3=DS.TG.3&CVVS.T.1=CVVS.T.1&CVVS.S.2=CVVS.S.2&CVVS.L.1=CVVS.L.1&CVVS.TG.1=CVVS.TG.1&IR.T.1=IR.T.1&IR.S.2=IR.S.2&IR.L.1=IR.L.1&IR.TG.1=IR.TG.1&SI.T.2=SI.T.2&SI.S.2=SI.S.2&SI.L.1=SI.L.1&SI.TG.1=SI.TG.1&SR.T.1=SR.T.1&SR.S.1=SR.S.1&SR.L.2=SR.L.2&SR.TG.2=SR.TG.2&vista=web"
+url = "https://gobierno.ingenieriainformatica.uniovi.es/grado/plan/plan.php?vista=web&y=25-26&t=s1&DS_T_2=DS.T.2&DS_S_3=DS.S.3&DS_L_3=DS.L.3&DS_TG_3=DS.TG.3&CVVS_T_2=CVVS.T.2&CVVS_S_1=CVVS.S.1&CVVS_L_1=CVVS.L.1&CVVS_TG_1=CVVS.TG.1&IR_T_1=IR.T.1&IR_S_1=IR.S.1&IR_L_1=IR.L.1&IR_TG_1=IR.TG.1&SI_T_2=SI.T.2&SI_S_1=SI.S.1&SI_L_1=SI.L.1&SI_TG_1=SI.TG.1&SR_T_1=SR.T.1&SR_S_1=SR.S.1&SR_L_2=SR.L.2&SR_TG_2=SR.TG.2"
 response = requests.get(url)
 if response.status_code == 200:
     html = response.text
